@@ -8,36 +8,52 @@ editor: visual
 ---
 
 ## Question 1
-When performing a pull after cloning a repo you will get this return "Already up to date" because there is nothing new in the repo to pull. The only new files and information are locally on your machine. 
+
+When performing a pull after cloning a repo you will get this return "Already up to date" because there is nothing new in the repo to pull. The only new files and information are locally on your machine.
 
 ## Question 2
+
 install.packages() should be run in the console because it is downloading the package to your device.
 
 ## Question 3
-library() should go into the .qmd file because it loads the package for use with our code. 
+
+library() should go into the .qmd file because it loads the package for use with our code.
 
 ## Question 4
-No, palmerpenguins::penguins does not work initially because the package has not been installed yet. 
+
+No, palmerpenguins::penguins does not work initially because the package has not been installed yet.
+```{r}
+#| eval: FALSE
+palmerpenguins::penguins
+```
+
+## Question 5
 
 ```{r}
 library(palmerpenguins)
-
 palmerpenguins::penguins
 ```
-Now that the package has been loaded the data is accessible.
 
-## Question 5
-```{r}
-palmerpenguins::penguins
-```
-You need to library the package beforehand or R will return something along the lines of "penguin" object not recognized. 
+You need to library the package beforehand or R will return something along the lines of "penguin" object not recognized. If there was a library call for it earlier in the code than it would have printed. 
 
 ## Question 6
-We can hide warning messages by using the warning chunk option and setting it to false, or you may use the suppressWarnings(library()) fucntion.
+
+We can hide warning messages by using the warning chunk option and setting it to false, or you may use the suppressWarnings(library()) function.
+
+```{r}
+suppressWarnings(library(dplyr))
+```
+
 
 ## Question 7
-You can access the help file for the arrange function (dplyr) by entering ?arrange into the console. This function orders the rows of a data frame by the values of selected columns. 
 
-## Question 8 
-![Here is my commit history before this message.](CommitHistory.png)
+You can access the help file for the arrange function (dplyr) by entering ?arrange into the console. This function orders the rows of a data frame by the values of selected columns.
+```{r}
+library(dplyr)
+iris2 <- arrange(iris, Petal.Length)
+head(iris2)
+```
 
+## Question 8
+
+![Here is my commit history before this message.](images/CommitHistory.png)
