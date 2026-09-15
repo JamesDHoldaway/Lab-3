@@ -3,7 +3,7 @@ title: "Lab-3"
 author:
   - name: "James Holdaway"
     affiliation: "NCSU Undergraduate Statistics"
-format: html
+format: pdf
 editor: visual
 ---
 
