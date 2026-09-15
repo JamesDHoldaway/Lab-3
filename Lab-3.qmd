@@ -41,6 +41,7 @@ You need to library the package beforehand or R will return something along the 
 We can hide warning messages by using the warning chunk option and setting it to false, or you may use the suppressWarnings(library()) function.
 
 ```{r}
+#| warning: FALSE
 suppressWarnings(library(dplyr))
 ```
 
